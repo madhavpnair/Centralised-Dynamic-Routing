@@ -143,7 +143,7 @@ class DynamicSSSP:
         2. find affected vertices
         recalculate distances and update SP(G) for affected vertices
 
-        change in approach : 
+        change in the approach from last meeting: 
         Don't delete the edge from the graph but keep it in the graph with its new weight.
         Include the incremented edge in the recalculation of distances and update of SP(G) for affected vertices.
         """
