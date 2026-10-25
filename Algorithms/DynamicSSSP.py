@@ -428,31 +428,43 @@ if __name__ == "__main__":
     print("----------------------------------------------------")
 
     print("test 1: Incrementing an edge that will remain as a part of a shortest path")
-    graph = {
-        "A": {"B": 2, "C": 5, "T": 1},
+    graph1 = {
+        "A": {"B": 2, "C": 5, "T": 10},
         "B": {"T": 3},
         "C": {"T": 2},
         "T": {},
     }
+    graph2 = {
+        "A" :{"C":1},
+        "B" : {"D":2},
+        "C" : {"E":3},
+        "D" : {"C":2, "F":2},
+        "E" : {"T":2},
+        "F" : {"T":4}
 
-    sssp = DynamicSSSP(graph, sink="T")
+    }
+
+    sssp = DynamicSSSP(graph2, sink="T")
 
     print("BEFORE INCREMENT")
     sssp.print_state()
 
     print("\nIncrementing edge A -> T")
 
-    affected = sssp.increment_edge("A", "T", weight=2)
+    # affected = sssp.increment_edge("C", "E", weight=1)
+    affected = sssp.increment_edge("C", "E", weight=5)
+
 
     print("\nAffected vertices:", sorted(affected))
 
     print("\nAFTER INCREMENT")
     sssp.print_state()
 
-
+    
+    
     print("\n\n----------------------------------------------------")
     print("test 2: Incrementing an edge that will no longer be a part of a shortest path")
-    sssp = DynamicSSSP(graph, sink="T")
+    sssp = DynamicSSSP(graph1, sink="T")
 
     print("BEFORE INCREMENT")
     sssp.print_state()
