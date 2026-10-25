@@ -5,6 +5,7 @@
     - [ ] which GNN model
     - [ ] how and where to train
 - [ ] add test suite for algorithms
+- [ ] update readme for incremental algorithms
 
 ## Final goals
 - [ ] fully functional PoC prototype
