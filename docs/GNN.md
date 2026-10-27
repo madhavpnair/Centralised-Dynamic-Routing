@@ -9,7 +9,6 @@ The tentative tech stack is described below
     2. **Time** : Date, Time, Daily and Weekly cycles, recent trend, weather changes
 - graph component handles space and a temporal component handles time
 - Main model : [`Graph WaveNet`](https://arxiv.org/abs/1906.00121)
-- Line graph : each road segment (edge) will be a node
 - feature vector : [speed, day-of-week, time, weather, length, lane count,..]
 - estimated travel time = length of the road segment / predicted average speed
 - Datasets to look for : 
@@ -17,6 +16,13 @@ The tentative tech stack is described below
     - METR-LA or PEMS-BAY for benchmarking
     - Smart City Traffic & Urban Mobility (Kaggle) (Synthetic)
     - Urban Traffic Congestion Prediction, Multi-City (Kaggle) (Synthetic)
+
+#### Two graphs
+1. **Routing graph** - intersections are nodes and roads are edges. Dynamic SSSP runs on this.
+2. **Line graph** 
+                  - for the GNN. roads are nodes. GNN runs on this.<br>
+                  - GNN produces one output per node - travel time or avg.speed of that road<br>
+                  - we write this onto the matching edge of the routing graph as its edge weight
 
 ### Message Passing
 ```
