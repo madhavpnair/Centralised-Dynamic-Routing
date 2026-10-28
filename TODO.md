@@ -1,10 +1,10 @@
 ## Immediate goals
-- [ ] edge weight decrementation algorithm
+- [x] edge weight decrementation algorithm
 - [ ] get dataset for GNN
 - [ ] update GNN.md with plans 
     - [ ] which GNN model
     - [ ] how and where to train
-- [ ] add test suite for algorithms
+- [x] add test suite for algorithms
 - [ ] update readme for incremental algorithms
 
 ## Final goals
