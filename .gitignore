@@ -221,3 +221,6 @@ __marimo__/
 
 # Windows system file
 **/desktop.ini
+ 
+# text files containing output
+*.txt
