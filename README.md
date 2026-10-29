@@ -22,6 +22,7 @@ Click to go to the [Overleaf Project](https://www.overleaf.com/read/tjqdtrbgdsqr
 - We have to add congestion penalty to a path when a vehicle is allowed to travel on that route
 
 ### Requirements and Usage
+- use `git pull` to pull the latest changes from the remote repository
 - create a virtual environment : `python3 -m venv .venv`
 - activate the virtual environment : `source .venv/bin/activate`
 - install the `heapdict` library : `pip install heapdict` 
@@ -33,5 +34,5 @@ Click to go to the [Overleaf Project](https://www.overleaf.com/read/tjqdtrbgdsqr
     - [`TestDynamicSSSP`](./Algorithms/Tests/TestDynamicSSSP.py) : individual edges algorithms
     - [`TestDynamicSWSF-FP`](./Algorithms/Tests/TestDynamicSWSF-FP.py) : batch algorithms
 
-- use `git pull` to pull the latest changes from the remote repository
+
 
