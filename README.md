@@ -22,14 +22,22 @@ Click to go to the [Overleaf Project](https://www.overleaf.com/read/tjqdtrbgdsqr
 - We have to add congestion penalty to a path when a vehicle is allowed to travel on that route
 
 ### Requirements and Usage
+#### Get the Latest Changes
 - use `git pull` to pull the latest changes from the remote repository
+
+#### Setup the Virtual Environment (if not already set up)
 - create a virtual environment : `python3 -m venv .venv`
 - activate the virtual environment : `source .venv/bin/activate`
 - install the `heapdict` library : `pip install heapdict` 
+
+#### Run the Tests
 - run `python3 -m Algorithms.Tests.TestDynamicSSSP` from the root directory to get the logs and test results for the incremental algorithm for incrementation and decrementation of individual edges
     - logs go to [`logs/routing.log`](./logs/routing.log)
     - test traces and results get printed in the terminal
 - run `python3 -m Algorithms.Tests.TestDynamicSWSF-FP` for testing the batch algorithm
+    - results are printed in the terminal
+
+#### Modify the Test Cases 
 - the test cases in the test suite can be modified here:
     - [`TestDynamicSSSP`](./Algorithms/Tests/TestDynamicSSSP.py) : individual edges algorithms
     - [`TestDynamicSWSF-FP`](./Algorithms/Tests/TestDynamicSWSF-FP.py) : batch algorithms
