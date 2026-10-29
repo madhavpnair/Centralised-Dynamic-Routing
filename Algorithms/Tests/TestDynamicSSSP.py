@@ -106,6 +106,9 @@ print_test_results_decrementation(graph3, "A", "B", 2, sink='T')
 logger.info("test 7: Decrementing an edge so that it changes the shortest path of other branch")
 print_test_results_decrementation(graph2, "C", "E", 1, sink='T')
 
+logger.info("test 8: decrementing an edge")
+print_test_results_decrementation(graph2, "C", "E", 1, sink='T')
+
 
 logger.info("Tests for DynamicSSSP ended")
 end_logging()
