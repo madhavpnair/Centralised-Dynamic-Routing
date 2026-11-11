@@ -1,5 +1,5 @@
 # Centralised-Dynamic-Routing
-Proof of Concept for Centralised Routing using dynamic edge weights predicted by a GNN model and graph solver for successive shortest path algorithm
+Proof of Concept for Centralised Routing using dynamic edge weights predicted by a GNN model and graph solver for ~~successive shortest path algorithm~~ Dynamic Single Sink Shortest Path algorithm
 
 Click to go to the [Overleaf Project](https://www.overleaf.com/read/tjqdtrbgdsqr#af76e8)
 
@@ -17,8 +17,9 @@ Click to go to the [Overleaf Project](https://www.overleaf.com/read/tjqdtrbgdsqr
     - Number of outgoing and ingoing roads
 - The model is trained using above input features and ground truth
 ### Graph Solver
-- Once we get the edge weights, we need to direct vehicles to paths
-- This is done by successive shortest path algorithm
+- These edge weights are dynamic and can change on the fly. 
+- We need to direct vehicles to shortest paths to the sink (destination). The `DynamicSSSP` algorithm helps here.
+- We have implemented algorithms to recompute the shortest paths on edge weight incrementation and decrementation inspired from the [Ramalingam-Reps](./docs/Ramalingam-Reps-paper.pdf) 
 - We have to add congestion penalty to a path when a vehicle is allowed to travel on that route
 
 ## Requirements and Usage
